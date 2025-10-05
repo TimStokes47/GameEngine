@@ -7,6 +7,7 @@ add_library(Engine
         ${CMAKE_CURRENT_SOURCE_DIR}/src/platform/factory.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/src/platform/glfw/glfwFactory.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/src/platform/glfw/glfwWindow.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/platform/glfw/glfwInput.cpp
 )
 
 target_link_libraries(Engine PRIVATE glfw)

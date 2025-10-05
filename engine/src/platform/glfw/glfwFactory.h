@@ -6,7 +6,7 @@
 namespace Engine {
     class GlfwFactory : public Factory {
     public:
-        virtual std::unique_ptr<Window> createWindow() override;
+        std::unique_ptr<Window> createWindow() override;
     };
 }
 

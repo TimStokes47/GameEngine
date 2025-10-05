@@ -1,6 +1,6 @@
 #include <core/application.h>
 
 int main() {
-    Engine::Application app;
-    app.run();
+    Engine::Application::create();
+    Engine::Application::getInstance()->run();
 }

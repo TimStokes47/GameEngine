@@ -12,6 +12,7 @@ namespace Engine {
         void destroy() override;
         [[nodiscard]] bool shouldClose() const override;
         void swapBuffers() override;
+        void* getNativeWindow() override;
 
     private:
         GLFWwindow* m_handle = nullptr;

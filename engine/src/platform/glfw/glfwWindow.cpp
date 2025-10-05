@@ -18,5 +18,8 @@ bool Engine::GlfwWindow::shouldClose() const {
 
 void Engine::GlfwWindow::swapBuffers() {
     glfwSwapBuffers(m_handle);
-    glfwPollEvents();
+}
+
+void* Engine::GlfwWindow::getNativeWindow() {
+    return m_handle;
 }
