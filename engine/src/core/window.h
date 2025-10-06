@@ -1,5 +1,6 @@
 #ifndef GAME_ENGINE_WINDOW_H
 #define GAME_ENGINE_WINDOW_H
+#include <memory>
 
 namespace Engine {
     class Window {

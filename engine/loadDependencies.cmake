@@ -17,3 +17,22 @@ if (NOT glfw3_FOUND)
         add_subdirectory(${glfw3_SOURCE_DIR} ${glfw3_BINARY_DIR})
     endif()
 endif()
+
+# OpenGL
+find_package(OpenGL REQUIRED)
+
+# GLAD
+FetchContent_Declare(
+        glad
+        GIT_REPOSITORY https://github.com/Dav1dde/glad.git
+        GIT_TAG        658f48e72aee3c6582e80b05ac0f8787a64fe6bb #v2.0.6
+        GIT_PROGRESS   TRUE
+)
+
+#FetchContent_GetProperties(glad)
+FetchContent_MakeAvailable(glad)
+
+add_subdirectory("${glad_SOURCE_DIR}/cmake" glad_cmake)
+
+glad_add_library(glad REPRODUCIBLE LOADER API gl:core=4.6)
+

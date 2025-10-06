@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.26)
-project(GameEngine LANGUAGES CXX)
+project(GameEngine LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 23)
 

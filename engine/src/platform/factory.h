@@ -10,8 +10,8 @@ namespace Engine {
     public:
         virtual ~Factory() = default;
 
-        static void create();
-        static void destroy();
+        static void initialise();
+        static void terminate();
 
         static std::unique_ptr<Factory>& getInstance();
 

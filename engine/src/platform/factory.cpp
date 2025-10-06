@@ -1,19 +1,15 @@
 #include "factory.h"
-
-#include <iostream>
-
 #include "glfw/glfwFactory.h"
 
 #ifdef USE_GLFW
-void Engine::Factory::create() {
+void Engine::Factory::initialise() {
     s_instance = std::make_unique<GlfwFactory>();
-    std::cout << "GLFW Factory created" << std::endl;
 }
 #else
 #error "Platform is not defined"
 #endif
 
-void Engine::Factory::destroy() {
+void Engine::Factory::terminate() {
     s_instance.reset();
 }
 
